@@ -61,8 +61,8 @@ process_type = 'A51'
 # Mopo Countries
 countries = ["AL","DE","HU","MK","SE","AT","DK","IE","MT","SI","BA","EE","IT","NL","SK","BE","ES","LT","NO","TR","BG","FI","LU","PL","UA","CH","FR","LV","PT","UK","CY","GR","MD","RO","XK","CZ","HR","ME","RS"]
 
-# Client: aporras@epri.com API Key
-client = EntsoePandasClient(api_key="82640d6a-f803-4022-be3d-ba00a5b8422e")
+# Client: API Key
+client = EntsoePandasClient(api_key=<YOUR-API-KEY>)
 '''
 To ask for your API key
 * Register your epri email on the Transparency Platform
