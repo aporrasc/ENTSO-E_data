@@ -73,13 +73,9 @@ start = pd.Timestamp('20230101', tz='Europe/Brussels')
 end = pd.Timestamp('20240101', tz='Europe/Brussels')
 
 info = {"demand":{},"capacity":{}}
+start = pd.Timestamp('20230101', tz='Europe/Brussels')
+end = pd.Timestamp('20240101', tz='Europe/Brussels')
 for country_code in countries:
-    if country_code != "UK":
-        start = pd.Timestamp('20230101', tz='Europe/Brussels')
-        end = pd.Timestamp('20240101', tz='Europe/Brussels')
-    else:
-        start = pd.Timestamp('20180101', tz='Europe/Brussels')
-        end = pd.Timestamp('20190101', tz='Europe/Brussels')
     try:
         info["demand"][country_code] = client.query_load(country_code, start=start, end=end)["Actual Load"]
         info["capacity"][country_code] =client.query_installed_generation_capacity(country_code, start=start, end=end, psr_type=None)
